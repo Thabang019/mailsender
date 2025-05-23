@@ -16,8 +16,8 @@ public class EmailSender {
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom("thabangcebo@gmail.com");
         message.setTo("thabangcebo@gmail.com");
-        message.setSubject("New Message from: " + contactRequest.getName() + " " + contactRequest.getLastname());
-        message.setText("Email: " + contactRequest.getEmail() + "\n\nPhone Number: " + contactRequest.getPhoneNumber() + "\n\nMessage:\n" + contactRequest.getMessage());
+        message.setSubject("New Message from: " + contactRequest.getName());
+        message.setText("Email: " + contactRequest.getEmail() + "\n\nSubject: " + contactRequest.getSubject() + "\n\nMessage:\n" + contactRequest.getMessage());
         mailSender.send(message);
     }
 }

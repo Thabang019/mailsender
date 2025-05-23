@@ -3,9 +3,8 @@ package za.ac.cput.DTO;
 public class ContactRequest {
 
     private String name;
-    private String lastname;
     private String email;
-    private String phoneNumber;
+    private String subject;
     private String message;
 
     public ContactRequest() {
@@ -13,9 +12,8 @@ public class ContactRequest {
 
     public ContactRequest(Builder builder) {
         this.name = builder.name;
-        this.lastname = builder.lastname;
         this.email = builder.email;
-        this.phoneNumber = builder.phoneNumber;
+        this.subject = builder.subject;
         this.message = builder.message;
     }
 
@@ -23,16 +21,12 @@ public class ContactRequest {
         return name;
     }
 
-    public String getLastname() {
-        return lastname;
-    }
-
     public String getEmail() {
         return email;
     }
 
-    public String getPhoneNumber() {
-        return phoneNumber;
+    public String getSubject() {
+        return subject;
     }
 
     public String getMessage() {
@@ -41,18 +35,12 @@ public class ContactRequest {
 
     public static class Builder{
         private String name;
-        private String lastname;
         private String email;
-        private String phoneNumber;
+        private String subject;
         private String message;
 
         public Builder setName(String name) {
             this.name = name;
-            return this;
-        }
-
-        public Builder setLastname(String lastname) {
-            this.lastname = lastname;
             return this;
         }
 
@@ -61,8 +49,8 @@ public class ContactRequest {
             return this;
         }
 
-        public Builder setPhoneNumber(String phoneNumber) {
-            this.phoneNumber = phoneNumber;
+        public Builder setSubject(String subject) {
+            this.subject = subject;
             return this;
         }
 
