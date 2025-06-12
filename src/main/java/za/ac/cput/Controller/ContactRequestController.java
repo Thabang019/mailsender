@@ -9,8 +9,8 @@ import za.ac.cput.Services.EmailSender;
 
 
 @RestController
+@CrossOrigin(origins = "https://portfolioxdev.vercel.app")
 @RequestMapping("/api/contact")
-@CrossOrigin(origins = "*")
 public class ContactRequestController {
 
     @Autowired
